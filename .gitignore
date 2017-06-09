@@ -1,8 +1,11 @@
-logs
-target
+logs/
+target/
+out/
+gen/
 /.idea
 /.idea_modules
 /.classpath
 /.project
 /.settings
 /RUNNING_PID
+*.iml
