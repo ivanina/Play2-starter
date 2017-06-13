@@ -11,3 +11,18 @@ GET     /message                 controllers.AsyncController.message
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+# ~~~~
+
+GET     /clients/id-$id<\d+>            controllers.Clients.client(id: Long)
+
+GET     /clients/test-msg       controllers.Clients.getTestText(msg: String ?= "undefined")
+
+GET     /clients/:id            controllers.Clients.client(id: Long)
+
+GET     /client/file/*name      controllers.Clients.getFile(name: String)
+
+#GET     /clientss*            controllers.Default.todo  # !!?!?!?!
+
+GET     /passArgIndex           controllers.Clients.passArgIndex
+

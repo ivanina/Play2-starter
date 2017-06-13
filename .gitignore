@@ -1,7 +1,9 @@
-logs/
-target/
-out/
-gen/
+/logs/
+/target/
+/project/project
+/project/target
+/out/
+/gen/
 /.idea
 /.idea_modules
 /.classpath
@@ -9,3 +11,6 @@ gen/
 /.settings
 /RUNNING_PID
 *.iml
+/tmp/
+/dist/
+.cache
