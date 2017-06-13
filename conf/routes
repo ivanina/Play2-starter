@@ -3,26 +3,36 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
+GET        /                                    controllers.HomeController.index
 # An example controller showing how to use dependency injection
-GET     /count                      controllers.CountController.count
+GET        /count                               controllers.CountController.count
 # An example controller showing how to write asynchronous code
-GET     /message                 controllers.AsyncController.message
+GET        /message                             controllers.AsyncController.message
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET        /assets/*file                        controllers.Assets.versioned(path="/public", file: Asset)
 
 # ~~~~
 
-GET     /clients/id-$id<\d+>            controllers.Clients.client(id: Long)
+GET        /clients/id-$id<\d+>                 controllers.Clients.client(id: Long)
 
-GET     /clients/test-msg       controllers.Clients.getTestText(msg: String ?= "undefined")
+GET        /clients/test-msg                    controllers.Clients.getTestText(msg: String ?= "undefined")
 
-GET     /clients/:id            controllers.Clients.client(id: Long)
+GET        /clients/:id                         controllers.Clients.client(id: Long)
 
-GET     /client/file/*name      controllers.Clients.getFile(name: String)
+GET        /client/file/*name                   controllers.Clients.getFile(name: String)
 
 #GET     /clientss*            controllers.Default.todo  # !!?!?!?!
 
-GET     /passArgIndex           controllers.Clients.passArgIndex
+GET        /passArgIndex                        controllers.Clients.passArgIndex
+
+GET        /completion-stage-test               controllers.AsyncController.testAction
+
+GET        /completion-stage-cookie-test        controllers.AsyncController.testCompletionStage
+
+GET        /chunked-test                        controllers.AsyncController.chunkedTest
+
+GET        /comet-test                          controllers.AsyncController.cometTest
+
+GET        /socket-test                         controllers.AsyncController.socketTest
 
