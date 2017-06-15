@@ -1,0 +1,22 @@
+@(customerForm: Form[models.forms.CustomerForm])
+
+
+@helper.form(action = routes.CustomerController.addCustomer ) {
+
+    @helper.inputText(customerForm("email"))
+
+    @helper.inputPassword(customerForm("name"))
+
+    <button type="submit" name="action" value="edit">Edit order</button>
+}
+    <p></p>
+
+@helper.form(action = routes.CustomerController.upload, 'enctype -> "multipart/form-data") {
+
+    <input type="file" name="picture">
+
+    <p>
+        <input type="submit">
+    </p>
+
+}

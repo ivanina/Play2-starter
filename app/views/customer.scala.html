@@ -1,0 +1,12 @@
+@(customer: Customer)
+
+<p>
+    views/customer.scala.html
+</p>
+
+
+@customerViewVar = {
+    @customerView(customer: Customer)
+}
+
+@main("Welcome "+customer.getName)(customerViewVar)("error")

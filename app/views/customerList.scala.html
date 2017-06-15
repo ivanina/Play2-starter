@@ -1,0 +1,15 @@
+@(customers: List[Customer])
+
+@customerListVar = {
+    <p>List of customers:</p>
+    <ul>
+    @for(customer <- customers){
+        <li>
+        @customerView(customer)
+        </li>
+    }
+    </ul>
+    <p>Total @customers.length customers</p>
+}
+
+@main("Customers list")(customerListVar)("info")
