@@ -45,3 +45,5 @@ GET         /customer/add                        controllers.CustomerController.
 POST        /api/json-test                       controllers.JsonApiTestController.testApi
 
 POST        /upload-test                         controllers.CustomerController.upload
+
+GET         /actor-test/say-hello/*name          controllers.HelloActorController.sayHello(name)
